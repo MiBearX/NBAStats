@@ -15,7 +15,7 @@ def home():
                                    stat_map=api.stat_name_map)
         except AttributeError:
             flash("Player name is invalid", "error")
-    return render_template("home.html")
+    return render_template("index.html")
 
 
 @views.route('/compare', methods=['GET', 'POST'])
