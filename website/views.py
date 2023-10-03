@@ -10,6 +10,9 @@ def home():
     if request.method == 'POST':
         try:
             playername = request.form['playername']
+            if not playername:
+                raise AttributeError
+                
             player = api.call_api(playername)
             return render_template("single_stats.html", stats=player.player_stats, name=player.player_name,
                                    stat_map=api.stat_name_map)

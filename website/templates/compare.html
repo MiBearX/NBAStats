@@ -1,0 +1,21 @@
+{% extends "base.html" %} {% block title %} Compare Players {% endblock %}
+
+{% block content %}
+<h1>Compare two NBA players</h1>
+<br>
+<form method="POST">
+    <h3 align="center">Enter two NBA Players</h3>
+    <div class="form-group">
+        <label for="playername">First Player Name</label>
+        <input type="playername" class="form-control" id="playername" name="playername" placeholder="Enter First Player">
+    </div>
+
+    <div class="form-group">
+        <label for="playername">Second Player Name</label>
+        <input type="playername2" class="form-control" id="playername2" name="playername2" placeholder="Enter Second Player">
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+</form>
+{% endblock %}
