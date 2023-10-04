@@ -18,8 +18,7 @@
     {% for key, value in stats.items() %}
         <!--<h5 align="center">{{ key }}: {{value}}</h5>-->
         {% set full_stat_name = stat_map.get(key, key) %}
-        <h5 align="center">{{ full_stat_name }}: {{value}}</h5>
-
+        <h6 align="center">{{ full_stat_name }}: {{value}}</h6> 
         <!--<li align="center">{{ key }}: {{value}}</li>-->
     {% endfor %}
     </ul>
