@@ -10,8 +10,8 @@ body {
 }
 
 header {
-    background-color: #354E56;
-    color: #fff;
+    background-color: #C4C5BA;
+    color: #1B1B1B;
     padding: 13px;
     text-align: left;
 }
@@ -41,8 +41,12 @@ a {
     max-width: 800px;
     margin: 0 auto;
     padding: 0px;
-    
-    
+}
+
+.topbar {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0px;
 }
 
 /* Add your own CSS styles for customization */
@@ -50,11 +54,12 @@ a {
 /* Style for the image */
 .profile-image {
     --max-width: 100%;
-    width: 200px;
-    height: auto;
+    width: 150px;
+    height: 150px;
     display: block;
-    margin: 0 auto;
+    margin: 15px;
     float: right;
+    border-radius: 50%;
 }
 
 .right-align {
