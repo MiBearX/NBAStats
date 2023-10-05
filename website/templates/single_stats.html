@@ -15,12 +15,28 @@
     <body>
     <h1 align="center">{{ name }}</h1>
     <ul>
-    {% for key, value in stats.items() %}
-        <!--<h5 align="center">{{ key }}: {{value}}</h5>-->
-        {% set full_stat_name = stat_map.get(key, key) %}
-        <h6 align="center">{{ full_stat_name }}: {{value}}</h6> 
-        <!--<li align="center">{{ key }}: {{value}}</li>-->
-    {% endfor %}
+        <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Stat</th>
+                <th scope="col">Value</th>
+              </tr>
+            </thead>
+            <tbody>
+                {% for key, value in stats.items() %}
+        
+                {% set full_stat_name = stat_map.get(key, key) %}
+                <!--<h6 align="center">{{ full_stat_name }}: {{value}}</h6>-->
+              <tr>
+                
+                <td>{{full_stat_name}}</td>
+                <td>{{value}}</td>
+                
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+    
     </ul>
     </body>
 
