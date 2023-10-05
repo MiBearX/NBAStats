@@ -46,3 +46,7 @@ def stats():
             print(playername, playername2)
     return render_template("compare.html")
     """
+
+@views.route('/contact', methods=['GET', 'POST'])
+def contact():
+    return render_template("contact.html")
