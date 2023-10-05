@@ -5,13 +5,12 @@
 <form method="POST">
     <h3 align="center">Enter an NBA Player Name:</h3>
     <div class="form-group">
-        <label for="playername">Player Name</label>
-        <input type="playername" class="form-control" id="playername" name="playername" placeholder="Enter Playername">
+        <input type="playername" id="playername" name="playername" class="form-control" placeholder="Ex: Donovan Mitchell"/>
     </div>
+    <button type="submit" class="btn btn-primary">Get Stats!</button>
     <br>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <br>
 
-    <!-- Don't know if this will work -->
     <body>
     <h1 align="center">{{ name }}</h1>
     <ul>
@@ -26,7 +25,6 @@
                 {% for key, value in stats.items() %}
         
                 {% set full_stat_name = stat_map.get(key, key) %}
-                <!--<h6 align="center">{{ full_stat_name }}: {{value}}</h6>-->
               <tr>
                 
                 <td>{{full_stat_name}}</td>

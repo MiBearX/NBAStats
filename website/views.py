@@ -7,6 +7,7 @@ views = Blueprint('views', __name__)
 
 @views.route('/', methods=['GET', 'POST'])
 def home():
+    """
     if request.method == 'POST':
         try:
             playername = request.form['playername']
@@ -17,12 +18,12 @@ def home():
             return render_template("single_stats.html", stats=player.player_stats, name=player.player_name,
                                    stat_map=api.stat_name_map)
         except AttributeError:
-            flash("Player name is invalid", "error")
+            flash("Player name is invalid", "error")"""
     return render_template("bio.html")
 
 
 @views.route('/stats', methods=['GET', 'POST'])
-def compare():
+def stats():
     if request.method == 'POST':
         try:
             playername = request.form['playername']

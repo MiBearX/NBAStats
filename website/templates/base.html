@@ -14,10 +14,12 @@
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
 
     <title>{% block title %}Home{% endblock %}</title>
   </head>
   <body>
+    <!---
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <button
         class="navbar-toggler"
@@ -27,19 +29,41 @@
       >
         <span class="navbar-toggler-icon"></span>
       </button>
+      
       <div class="collapse navbar-collapse" id="navbar">
+        
+      </div>
+      <div class="center">
+      <div class="left-align"><h1>Michael Xiong</h1></div>
+      <div class="right-align">
         <div class="navbar-nav">
           <a class="nav-item nav-link" id="home" href="/">Home</a>
           <a class="nav-item nav-link" id="stats" href="/stats">Player Stats</a>
-          <!--<a class="nav-item nav-link" id="login" href="/login">Login</a>
-          <a class="nav-item nav-link" id="signUp" href="/sign-up">Sign Up</a> -->
         </div>
-      </div>
-    </nav>
+      </div></div>
+      
+    </nav> -->
+    <header>
     <div class="container">
+      <div class="header">
+        <h1>Michael Xiong</h1>
+      </div>
+
+      <div class="header" style="float: right;">
+        <a class="btn btn-primary" id="stats" href="/stats">Player Stats</a>
+      </div>
+      <div class="header" style="float:right; padding-left: 10px; padding-right: 10px;">
+        <h2>  /  </h2>
+      </div>
+      <div class="header" style="float: right;">
+        <a class="btn btn-secondary" id="home" href="/">Home</a>
+      </div>
+      
+    </div>
+  </header>
       {% block contents %}
       {% endblock %}
-    </div>
+    
     {% with messages = get_flashed_messages(with_categories=true) %} {% if
     messages %} {% for category, message in messages %} {% if category ==
     'error' %}
