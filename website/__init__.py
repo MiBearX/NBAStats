@@ -1,13 +1,16 @@
 from flask import Flask
-
+from flask_restful import Api
+from .csapi import Weapon
 
 def create_app():
     app = Flask(__name__)
     app.config['SECRET_KEY'] = 'askljflskadjfl;sdajfasdlf'
 
     from .views import views
-    #from .auth import auth
 
     app.register_blueprint(views, url_prefix='/')
-    #app.register_blueprint(auth, url_prefix='/')
+
+    api = Api(app)
+    api.add_resource(Weapon, "/weapons", "/weapons/<string:weaponType>",
+                     "/weapons/<string:weaponType>/<string:weaponName>")
     return app
