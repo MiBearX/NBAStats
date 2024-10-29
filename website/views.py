@@ -50,3 +50,7 @@ def stats():
 @views.route('/contact', methods=['GET', 'POST'])
 def contact():
     return render_template("contact.html")
+
+@views.route('/projects', methods=['GET', 'POST'])
+def projects():
+    return render_template("projects.html")
